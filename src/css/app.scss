@@ -5,12 +5,38 @@
 }
 
 .header {
-  background: linear-gradient(to top, #fff, #85EBD2 );
+  background: linear-gradient(to top, #fff, #85ebd2);
 }
 
 h4 {
-  color: #0D57B1;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #0d57b1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h6 {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  margin: 1rem;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+li {
+  margin: 1rem;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  text-align: left;
 }
 
 .card {
@@ -34,6 +60,17 @@ h4 {
   background-color: #85ebd24f;
 }
 
+.card-recomendacoes {
+  background-color: #85ebd270;
+  color: white;
+  border-radius: 20px;
+  margin-right: 10rem;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  padding-bottom: 5rem;
+}
+
 .icone {
   font-size: 5rem;
   margin: 0 auto;
@@ -51,6 +88,18 @@ h4 {
   justify-content: center;
 }
 
+.bloco-recomendacoes {
+  width: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .bloco-sentimentos {
+    padding-left: 20rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
 }
@@ -60,7 +109,7 @@ h4 {
 // }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #85EBD2; /* color of the scroll thumb */
+  background-color: #85ebd2; /* color of the scroll thumb */
   color: white;
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid white; /* creates padding around scroll thumb */
