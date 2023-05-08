@@ -27,6 +27,12 @@
           <li>{{ item.texto }}</li>
         </div>
         <p>{{ conclusao }}</p>
+        <q-btn
+          class="botao"
+          v-bind:style="{ color: corHumor }"
+          label="Playlist indicada"
+          @click="abrePlaylist()"
+        />
       </div>
     </div>
   </div>
@@ -41,6 +47,46 @@ export default defineComponent({
 
   components: {
     Card,
+  },
+
+  methods: {
+    abrePlaylist() {
+      if (this.humor == "feliz") {
+        window.open(
+          "https://open.spotify.com/playlist/37i9dQZF1EVJSvZp5AOML2?si=bf36d0376876407c"
+        );
+      }
+
+      if (this.humor == "indiferente") {
+        window.open(
+          "https://open.spotify.com/playlist/37i9dQZF1DWVNU9KfaKX5z?si=9ca0819d8b64426d"
+        );
+      }
+
+      if (this.humor == "triste") {
+        window.open(
+          "https://open.spotify.com/playlist/3EWlsQU8MaUhCfzf3BYyoQ?si=7fc05d730f924ad8"
+        );
+      }
+
+      if (this.humor == "nervoso") {
+        window.open(
+          "https://open.spotify.com/playlist/37i9dQZF1DX47UHGK8zGt8?si=7af9fc00999e4c2d"
+        );
+      }
+
+      if (this.humor == "irritado") {
+        window.open(
+          "https://open.spotify.com/playlist/37i9dQZF1DX7KTVQYEg01L?si=301f21a98c0b41c2"
+        );
+      }
+
+      if (this.humor == "esgotado") {
+        window.open(
+          "https://open.spotify.com/playlist/37i9dQZF1DWV6hddfqLW3Z?si=9666647212284846"
+        );
+      }
+    },
   },
 
   setup() {
