@@ -7,3 +7,37 @@
 .header {
   background: linear-gradient(to top, #fff, #85EBD2 );
 }
+
+h4 {
+  color: #0D57B1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.card {
+  height: 15rem;
+  width: 50%;
+}
+
+.icone {
+  font-size: 5rem;
+}
+
+.centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+// body::-webkit-scrollbar-track {
+//   background: orange; /* color of the tracking area */
+// }
+
+::-webkit-scrollbar-thumb {
+  background-color: #85EBD2; /* color of the scroll thumb */
+  color: white;
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid white; /* creates padding around scroll thumb */
+}
