@@ -1,10 +1,12 @@
 <template>
   <q-card class="card">
-    <div class="row">
-      <q-icon class="icone" :name="icone"  v-bind:style="{ 'color': cor }"></q-icon>
+    <q-card-section>
+      <div class="row">
+      <q-icon class="icone " :name="icone"  v-bind:style="{ 'color': cor }"></q-icon>
     </div>
+    </q-card-section>
     <div class="row">
-      <q-chip  v-bind:style="{ 'background-color': cor }">{{ texto }}</q-chip>
+      <q-chip class="chip" v-bind:style="{ 'background-color': cor }">{{ texto }}</q-chip>
     </div>
   </q-card>
 

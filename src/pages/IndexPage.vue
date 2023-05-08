@@ -3,7 +3,7 @@
     <div class="text-center">
       <h4>Como você está se sentindo hoje?</h4>
     </div>
-    <div class="row">
+    <div class="centralize" >
       <div v-for="item in sentimentos" :key="item" class="col-md-4">
         <Card :icone="item.icone" :texto="item.texto" :cor="item.cor"></Card>
       </div>
