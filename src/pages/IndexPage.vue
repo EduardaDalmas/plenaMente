@@ -4,11 +4,10 @@
       <h4>Como você está se sentindo hoje?</h4>
     </div>
     <div class="centralize" >
-      <div v-for="item in sentimentos" :key="item" class="col-md-4">
-        <Card :icone="item.icone" :texto="item.texto" :cor="item.cor"></Card>
+      <div v-for="item in sentimentos" :key="item" class="col-md-4  virtual-scroll-horizontal">
+        <Card :icone="item.icone" :texto="item.texto" :cor="item.cor" @onClickInfo="validaSentimento()"></Card>
       </div>
     </div>
-
   </q-page>
 </template>
 
@@ -24,6 +23,7 @@ export default defineComponent({
   },
 
   setup() {
+
     let sentimentos = [
       {
         icone: 'sentiment_satisfied',
@@ -42,8 +42,14 @@ export default defineComponent({
       }
     ]
 
+    const validaSentimento = () => {
+
+    }
+
     return {
-      sentimentos
+      sentimentos,
+      handleInfo,
+      validaSentimento
     }
   }
 

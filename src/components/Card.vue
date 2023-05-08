@@ -1,5 +1,5 @@
 <template>
-  <q-card class="card flat bordered">
+  <q-card class="card flat bordered"  @click="handleInfo()">
     <q-card-section>
       <div class="row">
       <q-icon class="icone " :name="icone"  v-bind:style="{ 'color': cor }"></q-icon>
@@ -32,6 +32,18 @@ export default defineComponent({
       type: String,
       default: '#'
     },
+  },
+
+  emits: ["onClickInfo"],
+
+  setup(props, { emit }) {
+    const handleInfo = () => {
+      emit("onClickInfo");
+    };
+
+    return {
+      handleInfo
+    }
   }
 })
 </script>
