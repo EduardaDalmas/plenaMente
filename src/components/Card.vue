@@ -1,5 +1,5 @@
 <template>
-  <q-card class="card">
+  <q-card class="card flat bordered">
     <q-card-section>
       <div class="row">
       <q-icon class="icone " :name="icone"  v-bind:style="{ 'color': cor }"></q-icon>

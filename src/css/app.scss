@@ -17,6 +17,21 @@ h4 {
   height: 15rem;
   width: 12rem;
   margin: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.card:hover {
+  height: 15rem;
+  width: 12rem;
+  margin: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  box-shadow: none;
+  cursor: pointer;
+  background-color: #85ebd24f;
 }
 
 .icone {
