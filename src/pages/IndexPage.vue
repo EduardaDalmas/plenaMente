@@ -3,7 +3,7 @@
     <div class="text-center">
       <h4>Como você está se sentindo hoje?</h4>
     </div>
-    <div class="centralize" >
+    <div class="centralize">
       <div v-for="item in sentimentos" :key="item" class="col-md-4  virtual-scroll-horizontal">
         <Card :icone="item.icone" :texto="item.texto" :cor="item.cor" @onClickInfo="validaSentimento()"></Card>
       </div>
@@ -48,7 +48,6 @@ export default defineComponent({
 
     return {
       sentimentos,
-      handleInfo,
       validaSentimento
     }
   }

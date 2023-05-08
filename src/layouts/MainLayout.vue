@@ -5,7 +5,6 @@
         <q-btn
           flat
           round
-          @click="toggleLeftDrawer"
         />
 
         <q-toolbar-title>
