@@ -1,5 +1,5 @@
 <template>
-  <q-page class="container">
+  <div class="container-fluid">
     <div class="text-center">
       <h4>Como você está se sentindo hoje?</h4>
     </div>
@@ -29,7 +29,7 @@
         <p>{{ conclusao }}</p>
       </div>
     </div>
-  </q-page>
+  </div>
 </template>
 
 <script>

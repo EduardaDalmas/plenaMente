@@ -61,7 +61,6 @@ li {
 }
 
 .card-recomendacoes {
-  background-color: #85ebd270;
   color: white;
   border-radius: 20px;
   margin-right: 10rem;
@@ -94,9 +93,21 @@ li {
 
 @media screen and (max-width: 500px) {
   .bloco-sentimentos {
-    padding-left: 20rem;
     overflow-x: auto;
     overflow-y: hidden;
+  }
+
+  .card-recomendacoes {
+    background-color: #85ebd270;
+    color: white;
+    border-radius: 20px;
+    width: 90%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bloco-recomendacoes {
+    width: 90%;
   }
 }
 
