@@ -15,32 +15,34 @@
       </div>
     </div>
 
-    <div
-      v-if="mostraConselho"
-      class="centralize card-recomendacoes"
-      v-bind:style="{ 'background-color': corHumor }"
-    >
-      <div class="text-center bloco-recomendacoes">
-        <h6>Hoje você está se sentindo {{ humor }}...</h6>
-        <p>{{ introducao }}</p>
-        <div v-for="item in recomendacoes" :key="item">
-          <li>{{ item.texto }}</li>
+    <div class="centralize">
+      <div
+        v-if="mostraConselho"
+        class="centralize card-recomendacoes"
+        v-bind:style="{ 'background-color': corHumor }"
+      >
+        <div class="text-center bloco-recomendacoes">
+          <h6>Hoje você está se sentindo {{ humor }}...</h6>
+          <p>{{ introducao }}</p>
+          <div v-for="item in recomendacoes" :key="item">
+            <li>{{ item.texto }}</li>
+          </div>
+          <p>{{ conclusao }}</p>
+          <q-btn
+            class="botao"
+            icon="fa-brands fa-spotify"
+            v-bind:style="{ color: corHumor }"
+            label="Playlist indicada"
+            @click="abrePlaylist()"
+          />
+          <q-btn
+            class="botao"
+            icon="fa-brands fa-youtube"
+            v-bind:style="{ color: corHumor }"
+            label="Vídeo indicado"
+            @click="abreVideo()"
+          />
         </div>
-        <p>{{ conclusao }}</p>
-        <q-btn
-          class="botao"
-          icon="fa-brands fa-spotify"
-          v-bind:style="{ color: corHumor }"
-          label="Playlist indicada"
-          @click="abrePlaylist()"
-        />
-        <q-btn
-          class="botao"
-          icon="fa-brands fa-youtube"
-          v-bind:style="{ color: corHumor }"
-          label="Vídeo indicado"
-          @click="abrePlaylist()"
-        />
       </div>
     </div>
   </div>
@@ -94,12 +96,6 @@ export default defineComponent({
           "https://open.spotify.com/playlist/37i9dQZF1DWV6hddfqLW3Z?si=9666647212284846"
         );
       }
-
-      if (this.humor == "desmotivado") {
-        window.open(
-          "https://open.spotify.com/playlist/280hYAs0wM3CswUTZDVBif?si=fccdfc111d734749"
-        );
-      }
     },
 
     abreVideo() {
@@ -109,10 +105,6 @@ export default defineComponent({
 
       if (this.humor == "indiferente") {
         window.open("https://www.youtube.com/watch?v=BeHmff8xxsU");
-      }
-
-      if (this.humor == "desmotivado") {
-        window.open("https://www.youtube.com/watch?v=45xrq0wpqv4");
       }
 
       if (this.humor == "triste") {
@@ -170,11 +162,6 @@ export default defineComponent({
         icone: "fa-regular fa-face-flushed",
         texto: "Esgotado",
         cor: "#5b07a6",
-      },
-      {
-        icone: "fa-regular fa-face-meh-blank",
-        texto: "desmotivado",
-        cor: "#085fd1",
       },
     ];
 
@@ -395,39 +382,6 @@ export default defineComponent({
         ];
         conclusao.value =
           "Lembre-se de que a felicidade é uma emoção positiva, mas também é normal experimentar outros sentimentos. Se você precisar de ajuda para lidar com emoções negativas, não hesite em procurar ajuda de um profissional de saúde mental ou médico.";
-      }
-
-      if (humor.value == "desmotivado") {
-        introducao.value =
-          "Se uma pessoa está se sentindo desmotivada, existem algumas coisas que ela pode fazer para tentar recuperar sua motivação:";
-        recomendacoes.value = [
-          {
-            texto:
-              "Defina objetivos realistas: Ter objetivos realistas e alcançáveis pode ajudar a pessoa a ter um senso de propósito e a trabalhar em direção a algo.",
-          },
-          {
-            texto:
-              "Encontre significado no que faz: Mesmo em tarefas mundanas, é possível encontrar significado e propósito. Encontrar o significado naquilo que faz pode ajudar a pessoa a se sentir mais motivada.",
-          },
-          {
-            texto:
-              "Celebre pequenas vitórias: Reconhecer e comemorar pequenas vitórias pode ajudar a pessoa a se sentir bem-sucedida e motivada a continuar.",
-          },
-          {
-            texto:
-              "Faça uma pausa: Às vezes, a falta de motivação pode ser resultado de excesso de trabalho ou estresse. Tirar uma pausa para descansar e fazer algo que goste pode ajudar a pessoa a se sentir renovada e motivada.",
-          },
-          {
-            texto:
-              "Encontre inspiração: Ler, ouvir ou assistir a histórias inspiradoras de outras pessoas pode ajudar a pessoa a se sentir motivada e inspirada a trabalhar em direção a seus objetivos.",
-          },
-          {
-            texto:
-              "Procure ajuda: Se a falta de motivação persistir, a pessoa pode procurar ajuda de um terapeuta ou conselheiro para explorar a causa subjacente e desenvolver estratégias para recuperar a motivação.",
-          },
-        ];
-        conclusao.value =
-          "Lembre-se, não há uma solução única para todos, é importante que a pessoa encontre o que funciona melhor para ela. Encoraje-a a experimentar diferentes estratégias e encontrar o que funciona melhor para ela.";
       }
     };
 
