@@ -15,32 +15,34 @@
       </div>
     </div>
 
-    <div
-      v-if="mostraConselho"
-      class="centralize card-recomendacoes"
-      v-bind:style="{ 'background-color': corHumor }"
-    >
-      <div class="text-center bloco-recomendacoes">
-        <h6>Hoje você está se sentindo {{ humor }}...</h6>
-        <p>{{ introducao }}</p>
-        <div v-for="item in recomendacoes" :key="item">
-          <li>{{ item.texto }}</li>
+    <div class="centralize">
+      <div
+        v-if="mostraConselho"
+        class="centralize card-recomendacoes"
+        v-bind:style="{ 'background-color': corHumor }"
+      >
+        <div class="text-center bloco-recomendacoes">
+          <h6>Hoje você está se sentindo {{ humor }}...</h6>
+          <p>{{ introducao }}</p>
+          <div v-for="item in recomendacoes" :key="item">
+            <li>{{ item.texto }}</li>
+          </div>
+          <p>{{ conclusao }}</p>
+          <q-btn
+            class="botao"
+            icon="fa-brands fa-spotify"
+            v-bind:style="{ color: corHumor }"
+            label="Playlist indicada"
+            @click="abrePlaylist()"
+          />
+          <q-btn
+            class="botao"
+            icon="fa-brands fa-youtube"
+            v-bind:style="{ color: corHumor }"
+            label="Vídeo indicado"
+            @click="abreVideo()"
+          />
         </div>
-        <p>{{ conclusao }}</p>
-        <q-btn
-          class="botao"
-          icon="fa-brands fa-spotify"
-          v-bind:style="{ color: corHumor }"
-          label="Playlist indicada"
-          @click="abrePlaylist()"
-        />
-        <q-btn
-          class="botao"
-          icon="fa-brands fa-youtube"
-          v-bind:style="{ color: corHumor }"
-          label="Vídeo indicado"
-          @click="abreVideo()"
-        />
       </div>
     </div>
   </div>
