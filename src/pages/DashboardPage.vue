@@ -18,43 +18,41 @@
 
       <div class="centralize q-mt-lg">
         <div class="row">
-          <div class="text-center col">
+          <div class="text-center col-sm-6">
             <div class="row">
               <a class="titulo-metrica"><b>Mulheres</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-sm-6">
             <div class="row">
               <a class="titulo-metrica"><b>Homens</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens }}%
+            </q-knob>
           </div>
         </div>
       </div>
@@ -66,120 +64,113 @@
       </div>
 
       <div class="centralize q-mt-md">
-        <div class="row">
-          <div class="text-center col">
+        <div class="row centralize">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Depressão</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="depressao"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ depressao }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="depressao"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ depressao }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ansiedade</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="ansiedade"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ ansiedade }}%
-              </q-knob>
-            </div>
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="ansiedade"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ ansiedade }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ataque de Pânico</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="panico"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ panico }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="panico"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ panico }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ambos transtornos</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="todos_transtornos"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ todos_transtornos }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="todos_transtornos"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ todos_transtornos }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Fazem tratamento</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="tratamento"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ tratamento }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="tratamento"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ tratamento }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Sem transtornos</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="sem_transtorno"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ sem_transtorno }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="sem_transtorno"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ sem_transtorno }}%
+            </q-knob>
           </div>
         </div>
       </div>
@@ -191,101 +182,96 @@
       </div>
 
       <div class="centralize q-mt-md">
-        <div class="row">
-          <div class="text-center col">
+        <div class="row centralize">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Depressão</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_depressao"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_depressao }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_depressao"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_depressao }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ansiedade</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_ansiedade"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_ansiedade }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_ansiedade"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_ansiedade }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ataque de Pânico</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_panico"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_panico }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_panico"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_panico }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ambos transtornos</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_todos_transtornos"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_todos_transtornos }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_todos_transtornos"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_todos_transtornos }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Fazem tratamento</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_tratamento"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_tratamento }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_tratamento"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_tratamento }}%
+            </q-knob>
           </div>
         </div>
       </div>
@@ -297,101 +283,96 @@
       </div>
 
       <div class="centralize q-mt-md">
-        <div class="row">
-          <div class="text-center col">
+        <div class="row centralize">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Depressão</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_depressao"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_depressao }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_depressao"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_depressao }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ansiedade</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_ansiedade"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_ansiedade }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_ansiedade"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_ansiedade }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ataque de Pânico</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_panico"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_panico }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_panico"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_panico }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Ambos transtornos</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_todos_transtornos"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_todos_transtornos }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_todos_transtornos"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_todos_transtornos }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Fazem tratamento</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_tratamento"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_tratamento }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_tratamento"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_tratamento }}%
+            </q-knob>
           </div>
         </div>
       </div>
@@ -403,82 +384,78 @@
       </div>
 
       <div class="centralize q-mt-md">
-        <div class="row">
-          <div class="text-center col">
+        <div class="row centralize">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Mulheres casadas</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_casadas"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_casadas }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_casadas"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_casadas }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Casadas depressão</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="mulheres_casadas_depressao"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ mulheres_casadas_depressao }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="mulheres_casadas_depressao"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ mulheres_casadas_depressao }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Homens casados</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_casados"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_casados }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_casados"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_casados }}%
+            </q-knob>
           </div>
-          <div class="text-center col">
+          <div class="text-center col-lg-4">
             <div class="row">
               <a class="titulo-metrica"><b>Casados depressão</b></a>
             </div>
-            <div class="row">
-              <q-knob
-                disable
-                show-value
-                font-size="12px"
-                v-model="homens_casados_depressao"
-                size="100px"
-                color="teal"
-                track-color="grey-3"
-                class="q-ma-md"
-              >
-                {{ homens_casados_depressao }}%
-              </q-knob>
-            </div>
+
+            <q-knob
+              disable
+              show-value
+              font-size="12px"
+              v-model="homens_casados_depressao"
+              size="100px"
+              color="teal"
+              track-color="grey-3"
+              class="q-ma-md"
+            >
+              {{ homens_casados_depressao }}%
+            </q-knob>
           </div>
         </div>
       </div>
