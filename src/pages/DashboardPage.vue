@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <div class="text-center">
       <h4>Estatísticas sobre a saúde mental estudantil</h4>
       <a class="subtitulo-metrica"

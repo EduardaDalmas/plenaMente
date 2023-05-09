@@ -40,10 +40,10 @@ export default defineComponent({
 
   methods: {
     mostraMenu() {
-      if (this.drawerRight == true) {
-        this.drawerRight = false;
-      } else {
+      if (this.drawerRight == false) {
         this.drawerRight = true;
+      } else {
+        this.drawerRight = false;
       }
     },
 
@@ -58,7 +58,7 @@ export default defineComponent({
   },
 
   setup() {
-    let drawerRight = ref("false");
+    let drawerRight = ref(false);
 
     return {
       drawerRight,
