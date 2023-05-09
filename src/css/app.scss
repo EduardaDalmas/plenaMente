@@ -83,7 +83,7 @@ li {
 
 .botao {
   margin: 1rem;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
   box-shadow: none;
 }
@@ -98,7 +98,7 @@ li {
   width: 70%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1500px) {
   .bloco-sentimentos {
     overflow-x: auto;
     overflow-y: hidden;

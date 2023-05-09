@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="text-center">
       <h4>Como você está se sentindo hoje?</h4>
     </div>
@@ -29,8 +29,16 @@
         <p>{{ conclusao }}</p>
         <q-btn
           class="botao"
+          icon="fa-brands fa-spotify"
           v-bind:style="{ color: corHumor }"
           label="Playlist indicada"
+          @click="abrePlaylist()"
+        />
+        <q-btn
+          class="botao"
+          icon="fa-brands fa-youtube"
+          v-bind:style="{ color: corHumor }"
+          label="Vídeo indicado"
           @click="abrePlaylist()"
         />
       </div>
@@ -86,6 +94,42 @@ export default defineComponent({
           "https://open.spotify.com/playlist/37i9dQZF1DWV6hddfqLW3Z?si=9666647212284846"
         );
       }
+
+      if (this.humor == "desmotivado") {
+        window.open(
+          "https://open.spotify.com/playlist/280hYAs0wM3CswUTZDVBif?si=fccdfc111d734749"
+        );
+      }
+    },
+
+    abreVideo() {
+      if (this.humor == "feliz") {
+        window.open("https://www.youtube.com/watch?v=Lkh0yUvvaYY");
+      }
+
+      if (this.humor == "indiferente") {
+        window.open("https://www.youtube.com/watch?v=BeHmff8xxsU");
+      }
+
+      if (this.humor == "desmotivado") {
+        window.open("https://www.youtube.com/watch?v=45xrq0wpqv4");
+      }
+
+      if (this.humor == "triste") {
+        window.open("https://www.youtube.com/watch?v=yQ2707Iied0");
+      }
+
+      if (this.humor == "nervoso") {
+        window.open("https://www.youtube.com/watch?v=dZJbORri0ro");
+      }
+
+      if (this.humor == "irritado") {
+        window.open("https://www.youtube.com/watch?v=ti9RmdvKHzw");
+      }
+
+      if (this.humor == "esgotado") {
+        window.open("https://www.youtube.com/watch?v=45xrq0wpqv4");
+      }
     },
   },
 
@@ -127,6 +171,11 @@ export default defineComponent({
         texto: "Esgotado",
         cor: "#5b07a6",
       },
+      {
+        icone: "fa-regular fa-face-meh-blank",
+        texto: "desmotivado",
+        cor: "#085fd1",
+      },
     ];
 
     const validaSentimento = (param, cor) => {
@@ -156,6 +205,47 @@ export default defineComponent({
         ];
         conclusao.value =
           "Lembre-se de que é normal sentir-se triste às vezes, mas há muitas coisas que você pode fazer para lidar com essa emoção e começar a se sentir melhor. Se você precisar de ajuda adicional, não hesite em procurar um profissional de saúde mental ou um médico.";
+      }
+
+      if (humor.value == "nervoso") {
+        introducao.value =
+          "Se uma pessoa está se sentindo nervosa, existem algumas coisas que ela pode fazer para tentar acalmar seus nervos:";
+        recomendacoes.value = [
+          {
+            texto:
+              "Respire fundo: Respirar profundamente e lentamente pode ajudar a pessoa a relaxar e acalmar seus nervos.",
+          },
+          {
+            texto:
+              "Faça exercícios de relaxamento: Exercícios como meditação, ioga ou alongamento podem ajudar a pessoa a relaxar e acalmar seus nervos.",
+          },
+          {
+            texto:
+              "Identifique a causa subjacente: Identificar a causa subjacente da ansiedade pode ajudar a pessoa a entender o que está causando seus nervos e a desenvolver estratégias para lidar com isso.",
+          },
+          {
+            texto:
+              "Mova-se: Fazer atividade física pode ajudar a pessoa a liberar a tensão e a energia acumulada em seu corpo.",
+          },
+          {
+            texto:
+              "Fale com alguém: Falar com alguém em quem confia, como um amigo, membro da família ou terapeuta, pode ajudar a pessoa a expressar seus sentimentos e encontrar apoio.",
+          },
+          {
+            texto:
+              "Visualize algo positivo: Visualizar algo que traga sentimentos de calma e felicidade pode ajudar a pessoa a se concentrar em pensamentos positivos em vez de nervosismo.",
+          },
+          {
+            texto:
+              "Evite estimulantes: Evitar estimulantes como cafeína e álcool pode ajudar a pessoa a evitar aumentar ainda mais seus nervos.",
+          },
+          {
+            texto:
+              "Durma o suficiente: Uma boa noite de sono pode ajudar a pessoa a se sentir mais descansada e menos nervosa durante o dia.",
+          },
+        ];
+        conclusao.value =
+          "Lembre-se, a ansiedade e os nervos são uma parte normal da vida, mas se a pessoa está tendo dificuldade em lidar com eles, ela pode procurar ajuda de um profissional de saúde mental.";
       }
 
       if (humor.value == "indiferente") {
@@ -305,6 +395,39 @@ export default defineComponent({
         ];
         conclusao.value =
           "Lembre-se de que a felicidade é uma emoção positiva, mas também é normal experimentar outros sentimentos. Se você precisar de ajuda para lidar com emoções negativas, não hesite em procurar ajuda de um profissional de saúde mental ou médico.";
+      }
+
+      if (humor.value == "desmotivado") {
+        introducao.value =
+          "Se uma pessoa está se sentindo desmotivada, existem algumas coisas que ela pode fazer para tentar recuperar sua motivação:";
+        recomendacoes.value = [
+          {
+            texto:
+              "Defina objetivos realistas: Ter objetivos realistas e alcançáveis pode ajudar a pessoa a ter um senso de propósito e a trabalhar em direção a algo.",
+          },
+          {
+            texto:
+              "Encontre significado no que faz: Mesmo em tarefas mundanas, é possível encontrar significado e propósito. Encontrar o significado naquilo que faz pode ajudar a pessoa a se sentir mais motivada.",
+          },
+          {
+            texto:
+              "Celebre pequenas vitórias: Reconhecer e comemorar pequenas vitórias pode ajudar a pessoa a se sentir bem-sucedida e motivada a continuar.",
+          },
+          {
+            texto:
+              "Faça uma pausa: Às vezes, a falta de motivação pode ser resultado de excesso de trabalho ou estresse. Tirar uma pausa para descansar e fazer algo que goste pode ajudar a pessoa a se sentir renovada e motivada.",
+          },
+          {
+            texto:
+              "Encontre inspiração: Ler, ouvir ou assistir a histórias inspiradoras de outras pessoas pode ajudar a pessoa a se sentir motivada e inspirada a trabalhar em direção a seus objetivos.",
+          },
+          {
+            texto:
+              "Procure ajuda: Se a falta de motivação persistir, a pessoa pode procurar ajuda de um terapeuta ou conselheiro para explorar a causa subjacente e desenvolver estratégias para recuperar a motivação.",
+          },
+        ];
+        conclusao.value =
+          "Lembre-se, não há uma solução única para todos, é importante que a pessoa encontre o que funciona melhor para ela. Encoraje-a a experimentar diferentes estratégias e encontrar o que funciona melhor para ela.";
       }
     };
 
